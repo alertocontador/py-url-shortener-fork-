@@ -1,0 +1,48 @@
+test_name: "Test for py-url-shortener : Design and implement an scalable URL shortener"
+stages:
+
+  - name: POST request to /short-key
+    request:
+      url: http://py-url-shortener:8000/short-key
+      method: POST
+      headers:
+        content-type: application/json
+      json:
+        url: "https://example.com"
+    response:
+      status_code: 200
+      strict: false
+      headers:
+        content-type: application/json
+      json:
+        short_key: !anystr
+        original_url: "https://example.com"
+      save:
+        json:
+          short_key: short_key
+
+  - name: POST request to /short-key/custom
+    request:
+      url: http://py-url-shortener:8000/short-key/custom
+      method: POST
+      headers:
+        content-type: application/json
+      json:
+        url: "https://google.com"
+        custom_key: "mylink"
+    response:
+      strict: false
+      status_code: 200
+      headers:
+        content-type: application/json
+      json:
+        short_key: "mylink"
+        original_url: "https://google.com"
+
+  - name: GET request to /short-key/{short-key}
+    request:
+      url: http://py-url-shortener:8000/short-key/mylink
+      method: GET
+    response:
+      strict: false
+      status_code: 200

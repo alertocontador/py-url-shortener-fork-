@@ -1,0 +1,4 @@
+
+runtimeInMinutes: 15
+env:
+    HOST: py-url-shortener:8000

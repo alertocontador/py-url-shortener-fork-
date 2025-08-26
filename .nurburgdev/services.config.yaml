@@ -1,0 +1,15 @@
+# Services Configuration for Design and implement an scalable URL shortener
+# Generated service configuration
+
+
+name: py-url-shortener
+directory: .
+cpuCores: 1
+memoryMB: 512
+instances: 1
+port: 8000
+runtime: python
+env:
+    HOST: "0.0.0.0"
+    PORT: 8000
+    

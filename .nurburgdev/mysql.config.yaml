@@ -1,0 +1,6 @@
+name: py-url-shortenermysql
+cpuCores: 1
+memoryMB: 512
+dbName: mysql
+user: root
+password: mysql
