@@ -14,6 +14,8 @@ MYSQL_CONFIG = {
     'autocommit': False,
 }
 
+print(MYSQL_CONFIG)
+
 def get_mysql_connection():
     """Get MySQL database connection"""
     try:

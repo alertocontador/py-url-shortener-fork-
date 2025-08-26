@@ -39,7 +39,7 @@ stages:
         short_key: "mylink"
         original_url: "https://google.com"
 
-  - name: GET request to /short-key/{short-key}
+  - name: GET request to /short-key/any-key
     request:
       url: http://py-url-shortener:8000/short-key/mylink
       method: GET
