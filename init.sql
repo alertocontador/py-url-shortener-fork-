@@ -1,9 +1,3 @@
--- Add your database schema and indexes here
--- URL shortener database schema
-
--- Create the database if it doesn't exist
-CREATE DATABASE IF NOT EXISTS url_shortener;
-USE url_shortener;
 
 -- URLs table to store original URLs and their short keys
 CREATE TABLE IF NOT EXISTS urls (
